@@ -11,13 +11,13 @@ namespace TTSHWeb
 		{
 		protected void Page_Load(object sender, EventArgs e)
 			{
-			if ( !IsPostBack )
-				{
+			//if ( !IsPostBack )
+			//	{
 
 			
-				Response.Redirect("~/Home.aspx");
-				}
+			//	Response.Redirect("~/Home.aspx");
+			//	}
 
-			}
+			//}
 		}
 	}
