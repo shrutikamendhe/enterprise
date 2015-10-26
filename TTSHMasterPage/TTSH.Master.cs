@@ -17,55 +17,55 @@ namespace TTSHWeb.MasterPage
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //------Added by Atul
-            if (!Request.Url.AbsoluteUri.Contains("Reports"))
-            {
-                if (ScriptManager.GetCurrent(Page).IsInAsyncPostBack)
-                {
+            ////------Added by Atul
+            //if (!Request.Url.AbsoluteUri.Contains("Reports"))
+            //{
+            //    if (ScriptManager.GetCurrent(Page).IsInAsyncPostBack)
+            //    {
 
-                }
-                else
-                {
+            //    }
+            //    else
+            //    {
 
-                    CancelUnexpectedRePost();
-                }
+            //        CancelUnexpectedRePost();
+            //    }
 
-            }
-
-
-            if (!IsPostBack)
-            {
-                try
-                {
-                    string sPath = string.Empty;//System.Web.HttpContext.Current.Request.Url.PathAndQuery.ToString();
-                    if (Request.Url.AbsoluteUri.Contains("Reports"))
-                        sPath = System.Web.HttpContext.Current.Request.Url.PathAndQuery.ToString();
-                    else
-                        sPath = System.Web.HttpContext.Current.Request.Url.AbsolutePath.ToString();
-                    if (HttpContext.Current.Session["MenuDT"] != null)
-                    {
-                        PopulateMenu();
-                        if (!DetectAccessRights(ref sPath))
-                        {
-                            Response.Redirect("Login.aspx");
-                        }
-                    }
-                    else
-                    {
-                        Response.Redirect("Login.aspx");
-                    }
-
-                    hdnUserName.Value = HttpContext.Current.Session["UserName"].ToString();
-
-                }
-                catch (Exception Ex)
-                {
-                    //WriteLog(Ex.Message + Environment.NewLine + Ex.Source + Environment.NewLine + Ex.StackTrace);
-                }
+            //}
 
 
+            //if (!IsPostBack)
+            //{
+            //    try
+            //    {
+            //        string sPath = string.Empty;//System.Web.HttpContext.Current.Request.Url.PathAndQuery.ToString();
+            //        if (Request.Url.AbsoluteUri.Contains("Reports"))
+            //            sPath = System.Web.HttpContext.Current.Request.Url.PathAndQuery.ToString();
+            //        else
+            //            sPath = System.Web.HttpContext.Current.Request.Url.AbsolutePath.ToString();
+            //        if (HttpContext.Current.Session["MenuDT"] != null)
+            //        {
+            //            PopulateMenu();
+            //            if (!DetectAccessRights(ref sPath))
+            //            {
+            //                Response.Redirect("Login.aspx");
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Response.Redirect("Login.aspx");
+            //        }
 
-            }
+            //        hdnUserName.Value = HttpContext.Current.Session["UserName"].ToString();
+
+            //    }
+            //    catch (Exception Ex)
+            //    {
+            //        //WriteLog(Ex.Message + Environment.NewLine + Ex.Source + Environment.NewLine + Ex.StackTrace);
+            //    }
+
+
+
+            //}
 
 
         }
