@@ -25,15 +25,14 @@ namespace TTSHWeb.MasterPage
 
                 }
                 else
-
                 {
-                  
+
                     CancelUnexpectedRePost();
                 }
 
             }
-            
-           
+
+
             if (!IsPostBack)
             {
                 try
@@ -64,7 +63,7 @@ namespace TTSHWeb.MasterPage
                     //WriteLog(Ex.Message + Environment.NewLine + Ex.Source + Environment.NewLine + Ex.StackTrace);
                 }
 
-               
+
 
             }
 
@@ -83,10 +82,8 @@ namespace TTSHWeb.MasterPage
         // Sapna K: Method to get allowed menu names in session
         private void PopulateMenu()
         {
-
             try
             {
-
                 // Sapna K: Call Method to get Parent and Child menu names
                 DataSet ds = GetDataSetForMenu();
                 // Sapna K: Create new arraylist object to store menu item
