@@ -6,18 +6,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace TTSHWeb
-	{
-	public partial class Default : System.Web.UI.Page
-		{
-		protected void Page_Load(object sender, EventArgs e)
-			{
-			//if ( !IsPostBack )
-			//	{
+{
+    public partial class Default : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
-			
-			//	Response.Redirect("~/Home.aspx");
-			//	}
-
-			//}
-		}
-	}
+        }
+    }
+}
