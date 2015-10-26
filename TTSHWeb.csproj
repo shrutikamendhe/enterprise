@@ -1,0 +1,774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{571A99A6-09DB-4E4D-8E40-4445DDE0BBC8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TTSHWeb</RootNamespace>
+    <AssemblyName>TTSHWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>C:\Users\mohd.ejaz\Desktop\AjaxControlToolkit.Binary.NET45\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin">
+      <HintPath>..\..\..\AjaxControlToolkit.Binary.NET45\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.Services.Client.5.6.0\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.WindowsAzure.ConfigurationManager.2.0.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=3.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WindowsAzure.Storage.3.0.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\default.css" />
+    <Content Include="AuditTrial.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\TTSHWeb.dll" />
+    <Content Include="bin\TTSHWeb.pdb" />
+    <Content Include="ContractMgmtUser\07-08-2015\Penguins~VII.jpg" />
+    <Content Include="ContractMgmtUser\07-08-2015\Penguins~ZJ0.jpg" />
+    <Content Include="ContractMgmtUser\08-08-2015\Chrysanthemum~8KI.jpg" />
+    <Content Include="ContractMgmtUser\08-08-2015\Desert~4BI.jpg" />
+    <Content Include="ContractMgmtUser\08-08-2015\Desert~MQU.jpg" />
+    <Content Include="ContractMgmtUser\08-08-2015\Desert~OL9.jpg" />
+    <Content Include="ContractMgmtUser\08-08-2015\Hydrangeas~MQU.jpg" />
+    <Content Include="ContractMgmtUser\08-08-2015\Hydrangeas~S6Y.jpg" />
+    <Content Include="ContractMgmtUser\08-08-2015\Tulips~S6B.jpg" />
+    <Content Include="ContractMgmtUser\10-08-2015\Hydrangeas~6ZM.jpg" />
+    <Content Include="ContractMgmtUser\10-08-2015\Penguins~7SJ.jpg" />
+    <Content Include="ContractMgmtUser\10-08-2015\Tulips~170.jpg" />
+    <Content Include="ContractMgmtUser\10-08-2015\Tulips~TEO.jpg" />
+    <Content Include="ContractMgmtUser\11-08-2015\Desert~CUI.jpg" />
+    <Content Include="ContractMgmtUser\11-08-2015\Lighthouse~R4J.jpg" />
+    <Content Include="ContractMgmtUser\11-08-2015\Penguins~GQZ.jpg" />
+    <Content Include="ContractMgmtUser\11-08-2015\Penguins~LJ0.jpg" />
+    <Content Include="ContractMgmtUser\11-08-2015\Tulips~52Y.jpg" />
+    <Content Include="ContractMgmtUser\11-08-2015\Tulips~TF5.jpg" />
+    <Content Include="ContractMgmtUser\11-08-2015\Tulips~XQK.jpg" />
+    <Content Include="ContractMgmtUser\12-08-2015\Desert~3OC.jpg" />
+    <Content Include="ContractMgmtUser\29-07-2015\Penguins~E26.jpg" />
+    <Content Include="ContractMgmtUser\31-07-2015\bootstrap.min~9VP.js" />
+    <Content Include="ContractMgmtUser\31-07-2015\bootstrap~Y6B.js" />
+    <Content Include="ContractMgmtUser\31-07-2015\custom~D0N.js" />
+    <Content Include="ContractMgmtUser\31-07-2015\jquery.min~9EQ.js" />
+    <Content Include="css\Audit.css" />
+    <Content Include="css\base.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\DMS.css" />
+    <Content Include="css\Ethics.css" />
+    <Content Include="css\Feasibility.css" />
+    <Content Include="css\GrantApplication.css" />
+    <Content Include="css\Grid.css" />
+    <Content Include="css\jQ-UI-Dialog.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery.mCustomScrollbar.css" />
+    <Content Include="css\MenuAccessRights.css" />
+    <Content Include="css\ModelPopUp.css" />
+    <Content Include="css\nanoscroller.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\Selcted.css" />
+    <Content Include="css\tableSorter.css" />
+    <Content Include="css\Tablstyle.css" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DeptPIRpt.aspx" />
+    <Content Include="EthicDetails.aspx" />
+    <Content Include="EthicFiles\18-08-2015\Chrysanthemum~K8C.jpg" />
+    <Content Include="EthicFiles\18-08-2015\Desert~P8J.jpg" />
+    <Content Include="EthicFiles\18-08-2015\Hydrangeas~LS8.jpg" />
+    <Content Include="EthicFiles\18-08-2015\Jellyfish~2XQ.jpg" />
+    <Content Include="EthicFiles\19-08-2015\Chrysanthemum~Z0U.jpg" />
+    <Content Include="EthicFiles\19-08-2015\Desert~T3I.jpg" />
+    <Content Include="EthicFiles\19-08-2015\Hydrangeas~2ZX.jpg" />
+    <Content Include="EthicFiles\19-08-2015\Hydrangeas~KVG.jpg" />
+    <Content Include="EthicFiles\19-08-2015\Jellyfish~KVG.jpg" />
+    <Content Include="EthicFiles\19-08-2015\Jellyfish~P4J.jpg" />
+    <Content Include="EthicFiles\19-08-2015\Penguins~KEF.jpg" />
+    <Content Include="EthicFiles\19-08-2015\Tulips~KEF.jpg" />
+    <Content Include="EthicFiles\22-08-2015\Chrysanthemum~42C.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="FeasibilityDetails.aspx" />
+    <Content Include="FeasibilityFiles\fonts\Oswald-Regular.svg" />
+    <Content Include="fonts\Oswald-Regular.svg" />
+    <Content Include="frmContractMgmt_ContractUsers.aspx" />
+    <Content Include="frmContractMgmt_ProjectUser.aspx" />
+    <Content Include="frmGrantDetailsForm.aspx" />
+    <Content Include="frmGrantSeniorCSCS.aspx" />
+    <Content Include="FrmGrant_Application.aspx" />
+    <Content Include="frmProject_Master.aspx" />
+    <Content Include="frmRegulatory.aspx" />
+    <Content Include="Frm_DMS.aspx" />
+    <Content Include="IFrame_FileUpload.aspx" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\Add-New.png" />
+    <Content Include="Images\ajax-loader %282%29.gif" />
+    <Content Include="Images\ajax-loader %283%29.gif" />
+    <Content Include="Images\ajax-loader %284%29.gif" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\asc.gif" />
+    <Content Include="Images\asc.png" />
+    <Content Include="Images\bg.gif" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\close1.png" />
+    <Content Include="Images\dashboard-items.png" />
+    <Content Include="Images\desc.gif" />
+    <Content Include="Images\desc.png" />
+    <Content Include="Images\downArrow.png" />
+    <Content Include="Images\download-metro.png" />
+    <Content Include="Images\download_icon_small.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\icon-cal.png" />
+    <Content Include="Images\icon-dashboard.png" />
+    <Content Include="Images\icon-delete.jpg" />
+    <Content Include="Images\icon-delete.png" />
+    <Content Include="Images\icon-edit.jpg" />
+    <Content Include="Images\icon-edit.png" />
+    <Content Include="Images\icon-search.jpg" />
+    <Content Include="Images\icon-view.jpg" />
+    <Content Include="Images\icon-view.png" />
+    <Content Include="Images\item-active.png" />
+    <Content Include="Images\item.png" />
+    <Content Include="Images\jq-ui-close.png" />
+    <Content Include="Images\loader-32.GIF" />
+    <Content Include="Images\loader-64.GIF" />
+    <Content Include="Images\loader.gif" />
+    <Content Include="Images\loading-bars.gif" />
+    <Content Include="Images\login-filler.jpg" />
+    <Content Include="Images\MB__back.png" />
+    <Content Include="Images\next_search.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\sort.png" />
+    <Content Include="Images\TanTockSeng-Hospital-Logo-small.jpg" />
+    <Content Include="Images\TanTockSeng-Hospital-Logo.jpg" />
+    <Content Include="Images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Images\ui-icons_222222_256x240.png" />
+    <Content Include="Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Images\ui-icons_454545_256x240.png" />
+    <Content Include="Images\ui-icons_888888_256x240.png" />
+    <Content Include="Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="MenuMasterMappping.Aspx" />
+    <Content Include="Others\10-08-2015\Hydrangeas~7CS.jpg" />
+    <Content Include="Others\10-08-2015\Tulips~FVM.jpg" />
+    <Content Include="PageMethods.aspx" />
+    <Content Include="ProjectDept_PiReport.aspx" />
+    <Content Include="ReportProjectDeptPI.aspx" />
+    <Content Include="Reports.aspx" />
+    <Content Include="Scripts\Alert.js" />
+    <Content Include="FeasibilityFiles\fonts\Oswald-Regular.eot" />
+    <Content Include="FeasibilityFiles\fonts\Oswald-Regular.otf" />
+    <Content Include="FeasibilityFiles\fonts\Oswald-Regular.ttf" />
+    <Content Include="FeasibilityFiles\fonts\Oswald-Regular.woff" />
+    <Content Include="packages.config" />
+    <Content Include="DownloadHandler.ashx" />
+    <Content Include="DMSUpload.ashx" />
+    <Content Include="fonts\Oswald-Regular.eot" />
+    <Content Include="fonts\Oswald-Regular.otf" />
+    <Content Include="fonts\Oswald-Regular.ttf" />
+    <Content Include="fonts\Oswald-Regular.woff" />
+    <None Include="Properties\PublishProfiles\Test.pubxml" />
+    <None Include="Properties\PublishProfiles\TTSHWeb.pubxml" />
+    <None Include="Properties\PublishProfiles\TTSHWebPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\WebTTSHPub.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\Audit.js" />
+    <Content Include="Scripts\Common.js" />
+    <Content Include="Scripts\createScrollbarTable.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\DataOwner.js" />
+    <Content Include="Scripts\date.js" />
+    <Content Include="Scripts\Ethics.js" />
+    <Content Include="Scripts\Feasibility.js" />
+    <Content Include="Scripts\Frm_DMS.js" />
+    <Content Include="Scripts\Frm_GrantMaster.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-latest.js" />
+    <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.helper.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.MultiFile.js" />
+    <Content Include="Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Scripts\jquery.uploadfile.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\MenuMasterMapping.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\Pagemethods.js" />
+    <Content Include="Scripts\plugins.js" />
+    <Content Include="Scripts\RPrjDeptPI.js" />
+    <Content Include="Scripts\ScrollableTablePlugin_1.0_min.js" />
+    <Content Include="Scripts\Selected.js" />
+    <Content Include="Scripts\Selected1.js" />
+    <Content Include="Scripts\validation.js" />
+    <Content Include="Scripts\vendor\jquery-1.11.2.min.js" />
+    <Content Include="Scripts\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="Scripts\Webform\jquery.blockUI.js" />
+    <Content Include="Scripts\Webform\jquery.nanoscroller.js" />
+    <Content Include="Scripts\Webform\jsContract_Master.js" />
+    <Content Include="Scripts\Webform\jsforContractUser.js" />
+    <Content Include="Scripts\Webform\jsGrantDetails.js" />
+    <Content Include="Scripts\Webform\jsGrantSeniorCSCS.js" />
+    <Content Include="Scripts\Webform\jsProject_Master.js" />
+    <Content Include="Scripts\Webform\jsRegulatory.js" />
+    <Content Include="Scripts\Webform\xdate.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="SearchBox.ascx" />
+    <Content Include="SelectedChartRpt.aspx" />
+    <Content Include="SelectedProject.aspx" />
+    <Content Include="SelectedProjectBarchartRpt.aspx" />
+    <Content Include="SelectedProjectReport.aspx" />
+    <Content Include="selectedYear.xml" />
+    <None Include="Service References\TTSHWCFReference\configuration91.svcinfo" />
+    <None Include="Service References\TTSHWCFReference\configuration.svcinfo" />
+    <None Include="Service References\TTSHWCFReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="SessionExpire.aspx" />
+    <Content Include="TestMaster.aspx" />
+    <Content Include="TestWeb.aspx" />
+    <Content Include="ToolKit\AjaxControlToolkit.dll" />
+    <Content Include="Home.aspx" />
+    <Content Include="ToolKit\AjaxMin.dll" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="TTSHMasterPage\TTSH.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuditTrial.aspx.cs">
+      <DependentUpon>AuditTrial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuditTrial.aspx.designer.cs">
+      <DependentUpon>AuditTrial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeptPIRpt.aspx.cs">
+      <DependentUpon>DeptPIRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeptPIRpt.aspx.designer.cs">
+      <DependentUpon>DeptPIRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DMSUpload.ashx.cs">
+      <DependentUpon>DMSUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadHandler.ashx.cs">
+      <DependentUpon>DownloadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="EthicDetails.aspx.cs">
+      <DependentUpon>EthicDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EthicDetails.aspx.designer.cs">
+      <DependentUpon>EthicDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeasibilityDetails.aspx.cs">
+      <DependentUpon>FeasibilityDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeasibilityDetails.aspx.designer.cs">
+      <DependentUpon>FeasibilityDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmContractMgmt_ContractUsers.aspx.cs">
+      <DependentUpon>frmContractMgmt_ContractUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmContractMgmt_ContractUsers.aspx.designer.cs">
+      <DependentUpon>frmContractMgmt_ContractUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmContractMgmt_ProjectUser.aspx.cs">
+      <DependentUpon>frmContractMgmt_ProjectUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmContractMgmt_ProjectUser.aspx.designer.cs">
+      <DependentUpon>frmContractMgmt_ProjectUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrantDetailsForm.aspx.cs">
+      <DependentUpon>frmGrantDetailsForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmGrantDetailsForm.aspx.designer.cs">
+      <DependentUpon>frmGrantDetailsForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrantSeniorCSCS.aspx.cs">
+      <DependentUpon>frmGrantSeniorCSCS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmGrantSeniorCSCS.aspx.designer.cs">
+      <DependentUpon>frmGrantSeniorCSCS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGrant_Application.aspx.cs">
+      <DependentUpon>FrmGrant_Application.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmGrant_Application.aspx.designer.cs">
+      <DependentUpon>FrmGrant_Application.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmProject_Master.aspx.cs">
+      <DependentUpon>frmProject_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmProject_Master.aspx.designer.cs">
+      <DependentUpon>frmProject_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegulatory.aspx.cs">
+      <DependentUpon>frmRegulatory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmRegulatory.aspx.designer.cs">
+      <DependentUpon>frmRegulatory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_DMS.aspx.cs">
+      <DependentUpon>Frm_DMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frm_DMS.aspx.designer.cs">
+      <DependentUpon>Frm_DMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IFrame_FileUpload.aspx.cs">
+      <DependentUpon>IFrame_FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IFrame_FileUpload.aspx.designer.cs">
+      <DependentUpon>IFrame_FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuMasterMappping.Aspx.cs">
+      <DependentUpon>MenuMasterMappping.Aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuMasterMappping.Aspx.designer.cs">
+      <DependentUpon>MenuMasterMappping.Aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageMethods.aspx.cs">
+      <DependentUpon>PageMethods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageMethods.aspx.designer.cs">
+      <DependentUpon>PageMethods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectDept_PiReport.aspx.cs">
+      <DependentUpon>ProjectDept_PiReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProjectDept_PiReport.aspx.designer.cs">
+      <DependentUpon>ProjectDept_PiReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportProjectDeptPI.aspx.cs">
+      <DependentUpon>ReportProjectDeptPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportProjectDeptPI.aspx.designer.cs">
+      <DependentUpon>ReportProjectDeptPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchBox.ascx.cs">
+      <DependentUpon>SearchBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchBox.ascx.designer.cs">
+      <DependentUpon>SearchBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectedChartRpt.aspx.cs">
+      <DependentUpon>SelectedChartRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectedChartRpt.aspx.designer.cs">
+      <DependentUpon>SelectedChartRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectedProject.aspx.cs">
+      <DependentUpon>SelectedProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectedProject.aspx.designer.cs">
+      <DependentUpon>SelectedProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectedProjectBarchartRpt.aspx.cs">
+      <DependentUpon>SelectedProjectBarchartRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectedProjectBarchartRpt.aspx.designer.cs">
+      <DependentUpon>SelectedProjectBarchartRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectedProjectReport.aspx.cs">
+      <DependentUpon>SelectedProjectReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectedProjectReport.aspx.designer.cs">
+      <DependentUpon>SelectedProjectReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TTSHWCFReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SessionExpire.aspx.cs">
+      <DependentUpon>SessionExpire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionExpire.aspx.designer.cs">
+      <DependentUpon>SessionExpire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestMaster.aspx.cs">
+      <DependentUpon>TestMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestMaster.aspx.designer.cs">
+      <DependentUpon>TestMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestWeb.aspx.cs">
+      <DependentUpon>TestWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestWeb.aspx.designer.cs">
+      <DependentUpon>TestWeb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TTSHMasterPage\LoginMaster.Master.cs">
+      <DependentUpon>LoginMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTSHMasterPage\LoginMaster.Master.designer.cs">
+      <DependentUpon>LoginMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TTSHMasterPage\NewMasterPage.Master.cs">
+      <DependentUpon>NewMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTSHMasterPage\NewMasterPage.Master.designer.cs">
+      <DependentUpon>NewMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TTSHMasterPage\ReportMaster.Master.cs">
+      <DependentUpon>ReportMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTSHMasterPage\ReportMaster.Master.designer.cs">
+      <DependentUpon>ReportMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TTSHMasterPage\TTSH.Master.cs">
+      <DependentUpon>TTSH.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TTSHMasterPage\TTSH.Master.designer.cs">
+      <DependentUpon>TTSH.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Upload.ashx.cs">
+      <DependentUpon>Upload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadBudgetFile.ashx.cs">
+      <DependentUpon>UploadBudgetFile.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TTSHMasterPage\LoginMaster.Master" />
+    <Content Include="TTSHMasterPage\NewMasterPage.Master" />
+    <Content Include="Upload.ashx" />
+    <Content Include="UploadBudgetFile.ashx" />
+    <Content Include="TTSHMasterPage\ReportMaster.Master" />
+    <None Include="Service References\TTSHWCFReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TTSHWCFReference\service.wsdl" />
+    <None Include="Service References\TTSHWCFReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TTSHWCFReference\TTSH.Entity.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.ADUserDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Audit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.clsDropDown.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Contract_Collobrator_Master.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Contract_Details.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Contract_Master.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.DataOwner_Entity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.DocumentManagementSystem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.DocumentManagementSystemFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Ethics_Details.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Ethics_Grid.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Feasibility_Details.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Feasibility_Grid.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.GrantApplication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.GrantMasterDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.GrantNewProjectEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Grant_Details.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.ProjectDataforContractUsers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Project_DataOwner.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Project_Master.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.RegulatoryNewProjectEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Regulatory_Master.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.RptDepartment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.RptPIName.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.RptProjectCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.RptProjectType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.RptSelectedProject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Search.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Selected_Grid.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Selected_Project_Details.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.Senior_CSCS_Details.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\TTSHWCFReference\TTSHWeb.TTSHWCFReference.UserMenuRights.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\TTSHWCFReference\WcfAjaxServices.wsdl" />
+    <None Include="Service References\TTSHWCFReference\WcfAjaxServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Regulatory\" />
+    <Folder Include="UI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TTSHWCFReference\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>42478</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:28484/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

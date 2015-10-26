@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NewMasterPage.master.cs" Inherits="TTSHWeb.TTSHMasterPage.NewMasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Tan Tock Seng Hospital - A Community of Care</title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	<!-- Place favicon.ico in the root directory -->
+	<link href="../css/jquery-ui.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="../css/custom.css" />
+	<link href="../css/tableSorter.css" rel="stylesheet" />
+	<link href="../App_Themes/default.css" rel="stylesheet" />
+	<link href="../css/ModelPopUp.css" rel="stylesheet" />
+	<link href="../css/jQ-UI-Dialog.css" rel="stylesheet" />
+	<script src="../Scripts/vendor/jquery-1.11.2.min.js"></script>
+
+	<%--<script src="../Scripts/jquery-1.10.2.js"></script>--%>
+	<script src="../Scripts/jquery-ui.js"></script>
+
+	<%--<script src="../Scripts/jquery.min.js"></script>--%>
+	<script src="../Scripts/jquery-migrate-1.2.1.min.js"></script>
+	<%--<script src="../Scripts/jquery-ui.min.js"></script>--%>
+	<script src="../Scripts/jquery.tablesorter.min.js"></script>
+	<script src="../Scripts/jquery.fixedheadertable.min.js"></script>
+	<script src="../Scripts/Common.js"></script>
+	<script src="../Scripts/Pagemethods.js"></script>
+	<script src="../Scripts/Alert.js"></script>
+	<script type="text/javascript">
+
+		if (typeof window.event != 'undefined') {
+			document.onkeydown = function () { return IE_keydown(); }
+		}
+		else {
+			document.onkeypress = function (e)
+			{
+				return Other_keypress(e);
+			}
+		}
+		window.onload = function () { doTimer(); }
+		var cCurrDate = new Date();
+		var timercontrol;
+		var timer_is_on = 0;
+
+	</script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+		<asp:ToolkitScriptManager ID="Toolkitscriptmanager1" EnablePageMethods="true" EnablePartialRendering="true" LoadScriptsBeforeUI="false" runat="server"></asp:ToolkitScriptManager>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4df9c4c6-7aa2-419f-9f5a-5dac5bdf06d4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.195:2879/TTSHWCFService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfAjaxServices.wsdl" MetadataType="Wsdl" ID="40844550-4882-4757-abf4-58895db44a88" SourceId="1" SourceUrl="http://192.168.1.195:2879/TTSHWCFService.svc/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="16cb33e6-56f9-4d25-a3b9-41bfd090165b" SourceId="1" SourceUrl="http://192.168.1.195:2879/TTSHWCFService.svc/mex" />
+    <MetadataFile FileName="WcfAjaxServices.xsd" MetadataType="Schema" ID="4ee15edc-9306-409b-9326-5789d3b5f74a" SourceId="1" SourceUrl="http://192.168.1.195:2879/TTSHWCFService.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="e4f319a3-19ac-4ad5-bec9-bfb0c3cceea6" SourceId="1" SourceUrl="http://192.168.1.195:2879/TTSHWCFService.svc/mex" />
+    <MetadataFile FileName="TTSH.Entity.xsd" MetadataType="Schema" ID="ae5ff39f-899a-41f1-b844-4386583f8a5f" SourceId="1" SourceUrl="http://192.168.1.195:2879/TTSHWCFService.svc/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="d4b7892e-8a25-427c-9460-9152595b79ef" SourceId="1" SourceUrl="http://192.168.1.195:2879/TTSHWCFService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

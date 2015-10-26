@@ -1,0 +1,1793 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TTSH.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TTSH.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Project_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="COORDINATOR" nillable="true" type="tns:ArrayOfProject_Coordinator_Details" />
+      <xs:element minOccurs="0" name="DEPT_PI" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="DataOwnerList" nillable="true" type="tns:ArrayOfDataOwner" />
+      <xs:element minOccurs="0" name="Dt_ProjectEndDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PI_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Category_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_StartDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_ProjectStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="b_Collaboration_Involved" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_EthicsNeeded" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_Funding_req" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_IsFeasible" type="xs:int" />
+      <xs:element minOccurs="0" name="b_Ischild" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_Isselected_project" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_StartBy_TTSH" type="xs:boolean" />
+      <xs:element minOccurs="0" name="dt_Created_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Parent_ProjectID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ProjectStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_Category_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_Subtype_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_Type_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Coinvestigator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Contract_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Ethics_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Feasibility_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Grant_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Alias1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Alias2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Desc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Regulatory_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Research_IO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Research_IP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Selected_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Short_Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Project_Master" nillable="true" type="tns:Project_Master" />
+  <xs:complexType name="ArrayOfProject_Coordinator_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Project_Coordinator_Details" nillable="true" type="tns:Project_Coordinator_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProject_Coordinator_Details" nillable="true" type="tns:ArrayOfProject_Coordinator_Details" />
+  <xs:complexType name="Project_Coordinator_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_Coordinator_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Coordinator_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Project_Coordinator_Details" nillable="true" type="tns:Project_Coordinator_Details" />
+  <xs:complexType name="ArrayOfPI_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PI_Master" nillable="true" type="tns:PI_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPI_Master" nillable="true" type="tns:ArrayOfPI_Master" />
+  <xs:complexType name="PI_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dt_Created_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_Dept_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_DeptName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Firstname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Lastname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_MCR_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_PIName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Phone_no" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PI_Master" nillable="true" type="tns:PI_Master" />
+  <xs:complexType name="ArrayOfDataOwner">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataOwner" nillable="true" type="tns:DataOwner" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataOwner" nillable="true" type="tns:ArrayOfDataOwner" />
+  <xs:complexType name="DataOwner">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ftype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Guid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataOwner" nillable="true" type="tns:DataOwner" />
+  <xs:complexType name="ArrayOfProject_Dept_PI">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Project_Dept_PI" nillable="true" type="tns:Project_Dept_PI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProject_Dept_PI" nillable="true" type="tns:ArrayOfProject_Dept_PI" />
+  <xs:complexType name="Project_Dept_PI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dt_Modify_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_PI_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Project_Dept_PI" nillable="true" type="tns:Project_Dept_PI" />
+  <xs:complexType name="ArrayOfProject_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Project_Master" nillable="true" type="tns:Project_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProject_Master" nillable="true" type="tns:ArrayOfProject_Master" />
+  <xs:simpleType name="DropDownName">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PI">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PI_Department">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Project_Status">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IRB_Type">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IRB_Status">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Project_Category">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Project_Type">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Fesibility_Status">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Drug_Location">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Project_Sub_Types">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Mode_of_Notification">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Ethics_Review">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Clinical_Research">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Study_Status">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PI_Details">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Country">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Collaborator">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">17</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FillSubType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Project_Name">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FillClauses">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">20</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="FillCollaborators">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Contract_Category">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Contract_Status">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">23</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GetAllCollaboratorForProject">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ProjectFeasibility">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Coordinators">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cupboad_Number">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LeadSponsor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CTCstatus">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RegularoryStatusReportFor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">30</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RegulatoryIPStorage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AuditModules">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="AuditModulesFields">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MenuMapping">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GetYear">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DocumentCategory">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">36</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataOwner">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">37</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GrantType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">38</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GrantSubType1">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">39</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GrantSubType2">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GrantSubType3">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">41</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GrantSubmissionStatus">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">42</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GrantOutCome">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">43</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GrantAwardingOrganization">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">44</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GrantDuration">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">45</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Selected_Years">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">46</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Period_of_Insurance">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">47</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GrantDetailStatus">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">48</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SeniorSCSCGrantName">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">49</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DropDownName" nillable="true" type="tns:DropDownName" />
+  <xs:complexType name="ArrayOfclsDropDown">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsDropDown" nillable="true" type="tns:clsDropDown" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsDropDown" nillable="true" type="tns:ArrayOfclsDropDown" />
+  <xs:complexType name="clsDropDown">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValueField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsDropDown" nillable="true" type="tns:clsDropDown" />
+  <xs:complexType name="Feasibility_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CRA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPT_PI" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="PROJECT_DATA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_PIs" nillable="true" type="tns:ArrayOfProject_PI" />
+      <xs:element minOccurs="0" name="SPONSOR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserCId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="b_Confidential_Agreement" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_Feasibility_Outcome" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_Interest" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="dt_Created_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Feasibility_Start_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Protocol_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Site_Visit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Survey_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_Feasibility_Status_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Checklist_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Coinvestigator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Confidential_Agreement_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Email_Send_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="s_Feasibility_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IM_Invitation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_In_File" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="s_Interest_Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Alias1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Alias2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Protocol_Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Protocol_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Prototcol_Doc_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Prototcol_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Questionnaire_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Short_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Survey_Comments" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Feasibility_Details" nillable="true" type="tns:Feasibility_Details" />
+  <xs:complexType name="ArrayOfProject_PI">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Project_PI" nillable="true" type="tns:Project_PI" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProject_PI" nillable="true" type="tns:ArrayOfProject_PI" />
+  <xs:complexType name="Project_PI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_PI_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Project_PI" nillable="true" type="tns:Project_PI" />
+  <xs:simpleType name="Mode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Insert">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Update">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Delete">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Mode" nillable="true" type="tns:Mode" />
+  <xs:complexType name="ArrayOfFeasibility_Grid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Feasibility_Grid" nillable="true" type="tns:Feasibility_Grid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFeasibility_Grid" nillable="true" type="tns:ArrayOfFeasibility_Grid" />
+  <xs:complexType name="Feasibility_Grid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FeasfibilityMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Feasibility_Status_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Feasibility_Status_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PI_Names" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Feasibility_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Feasibility_Grid" nillable="true" type="tns:Feasibility_Grid" />
+  <xs:complexType name="Sponsor_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dt_Created_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sponsor_Master" nillable="true" type="tns:Sponsor_Master" />
+  <xs:complexType name="CRO_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dt_Created_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRO_Master" nillable="true" type="tns:CRO_Master" />
+  <xs:complexType name="Ethics_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CO_Investigator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_PI" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="EthicsStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Data" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_PIs" nillable="true" type="tns:ArrayOfProject_PI" />
+      <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="b_CRIO_culled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_IsChildBearing" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_IsClinical_Trial_Insurance" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_IsRenewal" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="dt_CRIO_culled_date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Created_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Ethics_Start_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_IRB_Approve_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_IRB_Approve_Enddate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_NewStudy_End_date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Project_Status_date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_EthicsReview_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_IRB_Status_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_IRB_Type_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_Category_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_Status_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Sub_Recruited" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Sub_Recruited_TTSH" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Sub_Targeted_TTSH" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Sub_targeted" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Insurance_Period" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Insurance_file" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Alias1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Alias2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Short_Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ethics_Details" nillable="true" type="tns:Ethics_Details" />
+  <xs:complexType name="ArrayOfEthics_Grid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ethics_Grid" nillable="true" type="tns:Ethics_Grid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEthics_Grid" nillable="true" type="tns:ArrayOfEthics_Grid" />
+  <xs:complexType name="Ethics_Grid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EthicsStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ethics_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="PI_Names" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ethics_Grid" nillable="true" type="tns:Ethics_Grid" />
+  <xs:complexType name="ArrayOfSelected_Grid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Selected_Grid" nillable="true" type="tns:Selected_Grid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSelected_Grid" nillable="true" type="tns:ArrayOfSelected_Grid" />
+  <xs:complexType name="Selected_Grid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PI_Names" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Selected_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Study_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cordinatorstatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Selected_Grid" nillable="true" type="tns:Selected_Grid" />
+  <xs:complexType name="CRA_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dt_Created_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_CRO_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_phone_no" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRA_Master" nillable="true" type="tns:CRA_Master" />
+  <xs:complexType name="Selected_Project_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BLINDED_UNBLINDED_XML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BU_Details" nillable="true" type="tns:ArrayOfSelectedProject_BU_Details" />
+      <xs:element minOccurs="0" name="CRA_Details" nillable="true" type="tns:ArrayOfSelected_CRA_Details" />
+      <xs:element minOccurs="0" name="CRA_XML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Co_Ordinator_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DEPT_PI" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="Project_Data" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_PIs" nillable="true" type="tns:ArrayOfProject_PI" />
+      <xs:element minOccurs="0" name="STUDY_BUDGET_FILE_XML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyBudgetFile" nillable="true" type="tns:ArrayOfSelected_Project_StudyBudgetFile" />
+      <xs:element minOccurs="0" name="UserCId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="b_Awaiting_Archiving" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_CTM_Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_IsApproveProject" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_IsReadmission" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_IsTeam_Needed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_SAE_Status" type="xs:boolean" />
+      <xs:element minOccurs="0" name="dt_Archiving_Enddate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_CTC_Expiry_date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_CTM_Expiry_date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Created_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Date_Sent_for_Archiving" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Discharge_date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Drug_Expiry_date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_EntryForMonthBlinded" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_EntryForMonthUnBlinded" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Expiry_date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Extended_Month_Blinded" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Extended_Month_UnBlinded" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Knowledge_date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_LastUpdated_By_Blinded" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_LastUpdated_By_UnBlinded" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Readmission_date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Recruit_End_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Recruit_Start_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Selected_Start_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_CRO_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Completed" type="xs:int" />
+      <xs:element minOccurs="0" name="i_CupBoardno_Blinded" type="xs:int" />
+      <xs:element minOccurs="0" name="i_CupBoardno_UnBlinded" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Drug_Location_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Notification_Mode" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Number_of_Boxes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Patient_Studyno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Project_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_Type_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Randomized" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Screen_Failure" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Screen_No" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Study_Status_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_TTSH_Target" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Withdrawl" type="xs:int" />
+      <xs:element minOccurs="0" name="monthNames" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_AgreementFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Agreement_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Backup_Blinded" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Blinded_Coordinator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Blinded_Cordinator_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Clinic1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Clinic2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Drug_Dose" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Drug_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Followup_Duratrion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_LastUpdated_By_Blinded" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_LastUpdated_By_UnBlinded" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Offsite_Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Alias1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Alias2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Research_Days" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Short_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Unblinded_Coordinator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Unblinded_Cordinator_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="selectedYear" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Selected_Project_Details" nillable="true" type="tns:Selected_Project_Details" />
+  <xs:complexType name="ArrayOfSelectedProject_BU_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SelectedProject_BU_Details" nillable="true" type="tns:SelectedProject_BU_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSelectedProject_BU_Details" nillable="true" type="tns:ArrayOfSelectedProject_BU_Details" />
+  <xs:complexType name="SelectedProject_BU_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_Selected_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Blinded_UnBlinded" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Cordinator_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Cordinator_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectedProject_BU_Details" nillable="true" type="tns:SelectedProject_BU_Details" />
+  <xs:complexType name="ArrayOfSelected_CRA_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Selected_CRA_Details" nillable="true" type="tns:Selected_CRA_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSelected_CRA_Details" nillable="true" type="tns:ArrayOfSelected_CRA_Details" />
+  <xs:complexType name="Selected_CRA_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_CRA_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_CRO_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Selected_CRA_Details" nillable="true" type="tns:Selected_CRA_Details" />
+  <xs:complexType name="ArrayOfSelected_Project_StudyBudgetFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Selected_Project_StudyBudgetFile" nillable="true" type="tns:Selected_Project_StudyBudgetFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSelected_Project_StudyBudgetFile" nillable="true" type="tns:ArrayOfSelected_Project_StudyBudgetFile" />
+  <xs:complexType name="Selected_Project_StudyBudgetFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_Selected_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Budget_Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Budget_Document_File" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Selected_Project_StudyBudgetFile" nillable="true" type="tns:Selected_Project_StudyBudgetFile" />
+  <xs:complexType name="Contract_Collobrator_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="I_Collaborator_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="dt_Created_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_Country_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Email1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Email2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Institution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_PhoNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_initialId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contract_Collobrator_Master" nillable="true" type="tns:Contract_Collobrator_Master" />
+  <xs:complexType name="ArrayOfContract_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contract_Master" nillable="true" type="tns:Contract_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContract_Master" nillable="true" type="tns:ArrayOfContract_Master" />
+  <xs:complexType name="Contract_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContAppStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="I_Collaborator_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="PI_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Category_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_ReviewedByName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ccdlist" nillable="true" type="tns:ArrayOfContract_Collobrator_Master" />
+      <xs:element minOccurs="0" name="dt_Contract_AssignDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Contract_ReqDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Created_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ReviewedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pjctmList" nillable="true" type="tns:ArrayOfProject_Master" />
+      <xs:element minOccurs="0" name="pmlist" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Alias1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Alias2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Short_Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contract_Master" nillable="true" type="tns:Contract_Master" />
+  <xs:complexType name="ArrayOfContract_Collobrator_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contract_Collobrator_Master" nillable="true" type="tns:Contract_Collobrator_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContract_Collobrator_Master" nillable="true" type="tns:ArrayOfContract_Collobrator_Master" />
+  <xs:complexType name="ArrayOfContract_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contract_Details" nillable="true" type="tns:Contract_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContract_Details" nillable="true" type="tns:ArrayOfContract_Details" />
+  <xs:complexType name="Contract_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contract_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contracts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PI_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Category_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="b_Amendments" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ccdlist" nillable="true" type="tns:ArrayOfContract_Collobrator_Master" />
+      <xs:element minOccurs="0" name="contlist" nillable="true" type="tns:ArrayOfContractList" />
+      <xs:element minOccurs="0" name="dt_Contract_StatusDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Created_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Effective_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Expiry_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Finalization_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_LastSigned_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_LastUpdated_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_NewExpiry_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Contract_Category_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Contract_Status_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Coordinator_fess" type="xs:double" />
+      <xs:element minOccurs="0" name="i_Currency_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Govt_Lawcountry" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Hospital_Cost" type="xs:double" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Investigator_fees" type="xs:double" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="listcsd" nillable="true" type="tns:ArrayOfContract_Status_Date" />
+      <xs:element minOccurs="0" name="lstSelClause" nillable="true" type="tns:ArrayOfSelected_Clause_Details" />
+      <xs:element minOccurs="0" name="lstSelCollab" nillable="true" type="tns:ArrayOfSelectedCollborators_Details" />
+      <xs:element minOccurs="0" name="lstmultiple" nillable="true" type="tns:ArrayOfContractDetails_MultipleContractFile" />
+      <xs:element minOccurs="0" name="pjctmList" nillable="true" type="tns:ArrayOfProject_Master" />
+      <xs:element minOccurs="0" name="pmlist" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="s_AmendmenstContract_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Clauses_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Contract_Display_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Contract_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_UploadedContract_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="test" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contract_Details" nillable="true" type="tns:Contract_Details" />
+  <xs:complexType name="ArrayOfContractList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContractList" nillable="true" type="tns:ContractList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContractList" nillable="true" type="tns:ArrayOfContractList" />
+  <xs:complexType name="ContractList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dt_Expiry_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_NewExpiry_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_ContractCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ContractId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ContractStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Contract_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Country" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContractList" nillable="true" type="tns:ContractList" />
+  <xs:complexType name="ArrayOfContract_Status_Date">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contract_Status_Date" nillable="true" type="tns:Contract_Status_Date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContract_Status_Date" nillable="true" type="tns:ArrayOfContract_Status_Date" />
+  <xs:complexType name="Contract_Status_Date">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dt_Status_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Contract_Status_ID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contract_Status_Date" nillable="true" type="tns:Contract_Status_Date" />
+  <xs:complexType name="ArrayOfSelected_Clause_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Selected_Clause_Details" nillable="true" type="tns:Selected_Clause_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSelected_Clause_Details" nillable="true" type="tns:ArrayOfSelected_Clause_Details" />
+  <xs:complexType name="Selected_Clause_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clause_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Contract_Clause_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Contract_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Proposed_Changes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Selected_Clause_Details" nillable="true" type="tns:Selected_Clause_Details" />
+  <xs:complexType name="ArrayOfSelectedCollborators_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SelectedCollborators_Details" nillable="true" type="tns:SelectedCollborators_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSelectedCollborators_Details" nillable="true" type="tns:ArrayOfSelectedCollborators_Details" />
+  <xs:complexType name="SelectedCollborators_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_Collobrator_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Contract_Details_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SelectedCollborators_Details" nillable="true" type="tns:SelectedCollborators_Details" />
+  <xs:complexType name="ArrayOfContractDetails_MultipleContractFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContractDetails_MultipleContractFile" nillable="true" type="tns:ContractDetails_MultipleContractFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContractDetails_MultipleContractFile" nillable="true" type="tns:ArrayOfContractDetails_MultipleContractFile" />
+  <xs:complexType name="ContractDetails_MultipleContractFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_ContractDetailsID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_ContractFile" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContractDetails_MultipleContractFile" nillable="true" type="tns:ContractDetails_MultipleContractFile" />
+  <xs:complexType name="ProjectDataforContractUsers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Pilisst" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="ccmlist" nillable="true" type="tns:ArrayOfContract_Collobrator_Master" />
+      <xs:element minOccurs="0" name="pmlist" nillable="true" type="tns:ArrayOfProject_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProjectDataforContractUsers" nillable="true" type="tns:ProjectDataforContractUsers" />
+  <xs:complexType name="ArrayOfContract_Collaborator_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contract_Collaborator_Details" nillable="true" type="tns:Contract_Collaborator_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContract_Collaborator_Details" nillable="true" type="tns:ArrayOfContract_Collaborator_Details" />
+  <xs:complexType name="Contract_Collaborator_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dt_Contract_Request_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Contract_Collaborator_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Contract_Master_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_InitialContract_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contract_Collaborator_Details" nillable="true" type="tns:Contract_Collaborator_Details" />
+  <xs:complexType name="ArrayOfADUserDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ADUserDetails" nillable="true" type="tns:ADUserDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfADUserDetails" nillable="true" type="tns:ArrayOfADUserDetails" />
+  <xs:complexType name="ADUserDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Child" type="xs:int" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmployeeID" type="xs:int" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MenuId" type="xs:int" />
+      <xs:element minOccurs="0" name="MenuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parent" type="xs:int" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserGUID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ADUserDetails" nillable="true" type="tns:ADUserDetails" />
+  <xs:complexType name="ArrayOfSearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Search" nillable="true" type="tns:Search" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearch" nillable="true" type="tns:ArrayOfSearch" />
+  <xs:complexType name="Search">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CTCCount" type="xs:int" />
+      <xs:element minOccurs="0" name="CTC_status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChildParentProject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContAppStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contract_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contracts" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Created_By" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EthicsStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ethics_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Feasibility_Status_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GD_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="GM_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="GrantDetailStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrantDetails_Applied" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsChildorParent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mutli" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PI_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PI_Names" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentProject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prog" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Category_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_ProjectStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Study_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="cordinatorstatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="iRecordExists" type="xs:long" />
+      <xs:element minOccurs="0" name="i_Feasibility_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:long" />
+      <xs:element minOccurs="0" name="isGrantDetailsApplied" type="xs:boolean" />
+      <xs:element minOccurs="0" name="parentProjectCount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sContractApplicationstatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sDepartment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_OutComeStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_SubmissionStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Search" nillable="true" type="tns:Search" />
+  <xs:complexType name="ArrayOfAudit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Audit" nillable="true" type="tns:Audit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAudit" nillable="true" type="tns:ArrayOfAudit" />
+  <xs:complexType name="Audit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Audit_Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Columns" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OldValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OnDatetime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TableName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Audit" nillable="true" type="tns:Audit" />
+  <xs:complexType name="ArrayOfRegulatory_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Regulatory_Master" nillable="true" type="tns:Regulatory_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegulatory_Master" nillable="true" type="tns:ArrayOfRegulatory_Master" />
+  <xs:complexType name="Regulatory_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CTCCount" type="xs:int" />
+      <xs:element minOccurs="0" name="CTC_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contract_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DT_LASTUPDATED_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PI_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pilisst" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="Project_Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegAmendDetails" nillable="true" type="tns:ArrayOfRegulatory_Ammendments_Details" />
+      <xs:element minOccurs="0" name="RegICFDetails" nillable="true" type="tns:ArrayOfRegulatory_ICF_Details" />
+      <xs:element minOccurs="0" name="RegIPList" nillable="true" type="tns:ArrayOfRegulatoryIPManagement" />
+      <xs:element minOccurs="0" name="RegSIxMId" type="xs:int" />
+      <xs:element minOccurs="0" name="RegSixMUpdateList" nillable="true" type="tns:ArrayOfRegulatorySixMonthUpdate" />
+      <xs:element minOccurs="0" name="RegStudyTeamList" nillable="true" type="tns:ArrayOfRegulatory_StudyTeam" />
+      <xs:element minOccurs="0" name="RegSubStatusList" nillable="true" type="tns:ArrayOfRegulatory_Submission_Status" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="b_Internal_Audit" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_Prism_AppStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="dt_CTC_ApprDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_CTC_ExpiryDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Created_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_NewExpiry_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_NewExt_Appr_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Prism_AppDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Protocol_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_CTC_status_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Completed_No" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Ongoing_Patient" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Pending_Screen_Outcome" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Randomized" type="xs:int" />
+      <xs:element minOccurs="0" name="i_SAE_No" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Screen_Failure" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Screened" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Sponsor_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Withdrawn" type="xs:int" />
+      <xs:element minOccurs="0" name="pmlist" nillable="true" type="tns:ArrayOfProject_Master" />
+      <xs:element minOccurs="0" name="rnum" type="xs:int" />
+      <xs:element minOccurs="0" name="s_CTC_Document" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CTC_EmailDocument" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CTC_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ExtCTCEmailApprDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IP_Storage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Investigation_product" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IpManagement" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_NewCTCEmailApprDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Other_Sponsor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Prism_AppNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Protocol_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Protocol_Ver_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_RecruitedBy_TTSH" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Rpt_File_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_SAE_Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Withdrawn_Reason" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Regulatory_Master" nillable="true" type="tns:Regulatory_Master" />
+  <xs:complexType name="ArrayOfRegulatory_Ammendments_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Regulatory_Ammendments_Details" nillable="true" type="tns:Regulatory_Ammendments_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegulatory_Ammendments_Details" nillable="true" type="tns:ArrayOfRegulatory_Ammendments_Details" />
+  <xs:complexType name="Regulatory_Ammendments_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Uploaded_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Submission_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Regulatory_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Uploaded_File" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Regulatory_Ammendments_Details" nillable="true" type="tns:Regulatory_Ammendments_Details" />
+  <xs:complexType name="ArrayOfRegulatory_ICF_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Regulatory_ICF_Details" nillable="true" type="tns:Regulatory_ICF_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegulatory_ICF_Details" nillable="true" type="tns:ArrayOfRegulatory_ICF_Details" />
+  <xs:complexType name="Regulatory_ICF_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dt_ICF_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Regulatory_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Version_No" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Regulatory_ICF_Details" nillable="true" type="tns:Regulatory_ICF_Details" />
+  <xs:complexType name="ArrayOfRegulatoryIPManagement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RegulatoryIPManagement" nillable="true" type="tns:RegulatoryIPManagement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegulatoryIPManagement" nillable="true" type="tns:ArrayOfRegulatoryIPManagement" />
+  <xs:complexType name="RegulatoryIPManagement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_Regulatory_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_IPManagement" type="xs:int" />
+      <xs:element minOccurs="0" name="s_IPName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Investigational_Product" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_StorageLocation" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegulatoryIPManagement" nillable="true" type="tns:RegulatoryIPManagement" />
+  <xs:complexType name="ArrayOfRegulatorySixMonthUpdate">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RegulatorySixMonthUpdate" nillable="true" type="tns:RegulatorySixMonthUpdate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegulatorySixMonthUpdate" nillable="true" type="tns:ArrayOfRegulatorySixMonthUpdate" />
+  <xs:complexType name="RegulatorySixMonthUpdate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NoOfMonths" type="xs:int" />
+      <xs:element minOccurs="0" name="RegSIxMId" type="xs:int" />
+      <xs:element minOccurs="0" name="SortDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="b_Internal_Audit" type="xs:boolean" />
+      <xs:element minOccurs="0" name="dt_LastUpdated_date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Completed_No" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Ongoing_Patient" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Pending_Screen_Outcome" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Randomized" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Regulatory_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_SAE_No" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Screen_Failure" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Screened" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Withdrawn" type="xs:int" />
+      <xs:element minOccurs="0" name="rnum" type="xs:int" />
+      <xs:element minOccurs="0" name="s_SAE_Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_SixmonthName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Withdrawn_Reason" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegulatorySixMonthUpdate" nillable="true" type="tns:RegulatorySixMonthUpdate" />
+  <xs:complexType name="ArrayOfRegulatory_StudyTeam">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Regulatory_StudyTeam" nillable="true" type="tns:Regulatory_StudyTeam" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegulatory_StudyTeam" nillable="true" type="tns:ArrayOfRegulatory_StudyTeam" />
+  <xs:complexType name="Regulatory_StudyTeam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_Regulatory_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Email_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_First_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Last_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Regulatory_StudyTeam" nillable="true" type="tns:Regulatory_StudyTeam" />
+  <xs:complexType name="ArrayOfRegulatory_Submission_Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Regulatory_Submission_Status" nillable="true" type="tns:Regulatory_Submission_Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegulatory_Submission_Status" nillable="true" type="tns:ArrayOfRegulatory_Submission_Status" />
+  <xs:complexType name="Regulatory_Submission_Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReportName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_FileUploaded_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Submission_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Interval_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Regulatory_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_File_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Uploaded_File" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Regulatory_Submission_Status" nillable="true" type="tns:Regulatory_Submission_Status" />
+  <xs:complexType name="RegulatoryNewProjectEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Pilisst" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="pmlist" nillable="true" type="tns:ArrayOfProject_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegulatoryNewProjectEntry" nillable="true" type="tns:RegulatoryNewProjectEntry" />
+  <xs:complexType name="UserMenuRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="menuAccessRights" nillable="true" type="tns:ArrayOfMenuAccessRights" />
+      <xs:element minOccurs="0" name="parentMenuAccess" nillable="true" type="tns:ArrayOfParentMenuAccess" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserMenuRights" nillable="true" type="tns:UserMenuRights" />
+  <xs:complexType name="ArrayOfMenuAccessRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MenuAccessRights" nillable="true" type="tns:MenuAccessRights" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenuAccessRights" nillable="true" type="tns:ArrayOfMenuAccessRights" />
+  <xs:complexType name="MenuAccessRights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessRights" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Child" type="xs:int" />
+      <xs:element minOccurs="0" name="MenuId" type="xs:int" />
+      <xs:element minOccurs="0" name="MenuName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parent" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MenuAccessRights" nillable="true" type="tns:MenuAccessRights" />
+  <xs:complexType name="ArrayOfParentMenuAccess">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParentMenuAccess" nillable="true" type="tns:ParentMenuAccess" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParentMenuAccess" nillable="true" type="tns:ArrayOfParentMenuAccess" />
+  <xs:complexType name="ParentMenuAccess">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessRights" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MenuId" type="xs:int" />
+      <xs:element minOccurs="0" name="MenuName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParentMenuAccess" nillable="true" type="tns:ParentMenuAccess" />
+  <xs:complexType name="ArrayOfRptSelectedProject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RptSelectedProject" nillable="true" type="tns:RptSelectedProject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRptSelectedProject" nillable="true" type="tns:ArrayOfRptSelectedProject" />
+  <xs:complexType name="RptSelectedProject">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayProjectID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectTitle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RptSelectedProject" nillable="true" type="tns:RptSelectedProject" />
+  <xs:complexType name="DocumentManagementSystem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="documentManagementSYstemFile" nillable="true" type="tns:ArrayOfDocumentManagementSystemFile" />
+      <xs:element minOccurs="0" name="project" nillable="true" type="tns:ArrayOfProject_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentManagementSystem" nillable="true" type="tns:DocumentManagementSystem" />
+  <xs:complexType name="ArrayOfDocumentManagementSystemFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentManagementSystemFile" nillable="true" type="tns:DocumentManagementSystemFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentManagementSystemFile" nillable="true" type="tns:ArrayOfDocumentManagementSystemFile" />
+  <xs:complexType name="DocumentManagementSystemFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProjectTile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_DMSId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentManagementSystemFile" nillable="true" type="tns:DocumentManagementSystemFile" />
+  <xs:complexType name="ArrayOfDMS_DocumentManagementSystem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DMS_DocumentManagementSystem" nillable="true" type="tns:DMS_DocumentManagementSystem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDMS_DocumentManagementSystem" nillable="true" type="tns:ArrayOfDMS_DocumentManagementSystem" />
+  <xs:complexType name="DMS_DocumentManagementSystem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocType" type="xs:int" />
+      <xs:element minOccurs="0" name="dt_Created_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_DMSId" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="isDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_DMS_FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DMS_DocumentManagementSystem" nillable="true" type="tns:DMS_DocumentManagementSystem" />
+  <xs:complexType name="ArrayOfRptProjectCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RptProjectCategory" nillable="true" type="tns:RptProjectCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRptProjectCategory" nillable="true" type="tns:ArrayOfRptProjectCategory" />
+  <xs:complexType name="RptProjectCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" type="xs:long" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RptProjectCategory" nillable="true" type="tns:RptProjectCategory" />
+  <xs:complexType name="ArrayOfRptProjectType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RptProjectType" nillable="true" type="tns:RptProjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRptProjectType" nillable="true" type="tns:ArrayOfRptProjectType" />
+  <xs:complexType name="RptProjectType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TypeId" type="xs:long" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RptProjectType" nillable="true" type="tns:RptProjectType" />
+  <xs:complexType name="ArrayOfRptDepartment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RptDepartment" nillable="true" type="tns:RptDepartment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRptDepartment" nillable="true" type="tns:ArrayOfRptDepartment" />
+  <xs:complexType name="RptDepartment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DepartmentId" type="xs:long" />
+      <xs:element minOccurs="0" name="DepartmentName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RptDepartment" nillable="true" type="tns:RptDepartment" />
+  <xs:complexType name="ArrayOfRptPIName">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RptPIName" nillable="true" type="tns:RptPIName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRptPIName" nillable="true" type="tns:ArrayOfRptPIName" />
+  <xs:complexType name="RptPIName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PIId" type="xs:long" />
+      <xs:element minOccurs="0" name="PIName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RptPIName" nillable="true" type="tns:RptPIName" />
+  <xs:complexType name="ArrayOfDataOwner_Entity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataOwner_Entity" nillable="true" type="tns:DataOwner_Entity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataOwner_Entity" nillable="true" type="tns:ArrayOfDataOwner_Entity" />
+  <xs:complexType name="DataOwner_Entity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmailId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GUID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MemberName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataOwner_Entity" nillable="true" type="tns:DataOwner_Entity" />
+  <xs:complexType name="ArrayOfProject_DataOwner">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Project_DataOwner" nillable="true" type="tns:Project_DataOwner" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProject_DataOwner" nillable="true" type="tns:ArrayOfProject_DataOwner" />
+  <xs:complexType name="Project_DataOwner">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="isDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="s_Contract_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_DisplayProject_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Ethics_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Feasibility_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Grant_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Regulatory_DataOwner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Selected_DataOwner" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Project_DataOwner" nillable="true" type="tns:Project_DataOwner" />
+  <xs:complexType name="ArrayOfGrantApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GrantApplication" nillable="true" type="tns:GrantApplication" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGrantApplication" nillable="true" type="tns:ArrayOfGrantApplication" />
+  <xs:complexType name="GrantApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChildParentProject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrantDetails_Applied" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsChildorParent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mutli" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PI_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentProject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prog" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="parentProjectCount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_OutcomeStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_SubmissionStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GrantApplication" nillable="true" type="tns:GrantApplication" />
+  <xs:complexType name="Grant_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dt_AwardDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GRANT_SUB_TYPE1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GRANT_SUB_TYPE2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GRANT_SUB_TYPE3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GRANT_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrantDetails_Applied" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Total_ChildAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="dt_ApplicationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_AwardDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Closing_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Created_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modified_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Outcome_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_Amount_Requested" type="xs:double" />
+      <xs:element minOccurs="0" name="i_AwardCountryID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_AwardOrganization" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Child_DurationID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Currency_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_FTE" type="xs:double" />
+      <xs:element minOccurs="0" name="i_GrantType_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Grant_SubType_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Grant_Sub_SubType_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Grant_Sub_Sub_SubType_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Outcome" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_SubmissionStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Application_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Child_Duration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Created_By" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Duration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Grant_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Mentor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Modified_By" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Old_Application_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Reviewers_Comments" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Grant_Master" nillable="true" type="tns:Grant_Master" />
+  <xs:complexType name="GrantMasterDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Pilisst" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="grant_Master" nillable="true" type="tns:Grant_Master" />
+      <xs:element minOccurs="0" name="parentProject" nillable="true" type="tns:GrantParentProjectData" />
+      <xs:element minOccurs="0" name="project" nillable="true" type="tns:Project_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GrantMasterDetails" nillable="true" type="tns:GrantMasterDetails" />
+  <xs:complexType name="GrantParentProjectData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GrantApplied" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Remaining_Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Total_Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="i_DurationID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Duration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Short_Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GrantParentProjectData" nillable="true" type="tns:GrantParentProjectData" />
+  <xs:complexType name="ArrayOfGrant_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Grant_Details" nillable="true" type="tns:Grant_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGrant_Details" nillable="true" type="tns:ArrayOfGrant_Details" />
+  <xs:complexType name="Grant_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CHILDPIList" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="CHildProjectList" nillable="true" type="tns:ArrayOfProject_Master" />
+      <xs:element minOccurs="0" name="GD_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="GMList" nillable="true" type="tns:ArrayOfGrant_Master" />
+      <xs:element minOccurs="0" name="GM_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="GrantDetailStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDeleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PIList" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="PI_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PMList" nillable="true" type="tns:ArrayOfProject_Master" />
+      <xs:element minOccurs="0" name="Project_Category_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="b_Grant_Extended" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_IsVariation_Needed" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="b_Mentor" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="dt_Award_Letter_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Created_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Grant_Expiry_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_New_Grant_Expiry_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Currency_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Donation_Amt" type="xs:double" />
+      <xs:element minOccurs="0" name="i_FTE" type="xs:double" />
+      <xs:element minOccurs="0" name="i_GrantMaster_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_GrantStatus_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Grant_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Indirects" type="xs:double" />
+      <xs:element minOccurs="0" name="i_Indirects_Amt_Utilized" type="xs:double" />
+      <xs:element minOccurs="0" name="i_Project_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Award_Letter_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Display_Project_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Donation_Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_IRB_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Mentor_Dept" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Mentor_Institute" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Mentor_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_OutcomeStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Point_of_Submission" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Project_Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Research_IO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_SubmissionStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Tech_PI_Dept" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Tech_PI_Institution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Tech_PI_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Grant_Details" nillable="true" type="tns:Grant_Details" />
+  <xs:complexType name="ArrayOfGrant_Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Grant_Master" nillable="true" type="tns:Grant_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGrant_Master" nillable="true" type="tns:ArrayOfGrant_Master" />
+  <xs:complexType name="GrantNewProjectEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CHILDpilist" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="CHildProjectList" nillable="true" type="tns:ArrayOfProject_Master" />
+      <xs:element minOccurs="0" name="GMList" nillable="true" type="tns:ArrayOfGrant_Master" />
+      <xs:element minOccurs="0" name="PIList" nillable="true" type="tns:ArrayOfPI_Master" />
+      <xs:element minOccurs="0" name="PMList" nillable="true" type="tns:ArrayOfProject_Master" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GrantNewProjectEntry" nillable="true" type="tns:GrantNewProjectEntry" />
+  <xs:complexType name="ArrayOfSenior_CSCS_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Senior_CSCS_Details" nillable="true" type="tns:Senior_CSCS_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSenior_CSCS_Details" nillable="true" type="tns:ArrayOfSenior_CSCS_Details" />
+  <xs:complexType name="Senior_CSCS_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AwardOrg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept_PI" nillable="true" type="tns:ArrayOfProject_PI" />
+      <xs:element minOccurs="0" name="Dept_PI_XML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrantExpDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GrantName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PI_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Test" type="xs:int" />
+      <xs:element minOccurs="0" name="UID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="b_IsGrant_Extented" type="xs:boolean" />
+      <xs:element minOccurs="0" name="budgetDetails" nillable="true" type="tns:ArrayOfSenior_CSCS_Budget_Allocation_Details" />
+      <xs:element minOccurs="0" name="budgetDetails_XML" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="d_Protected_time" type="xs:double" />
+      <xs:element minOccurs="0" name="dt_Approval_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_AwardLetter_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_AwardLetter_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dt_Created_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_ExpiryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Grant_Expiry_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_Modify_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_NewExpiry_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_NewGrantExpiry_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dt_StartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="i_Award_org_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Dept_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_GrantName" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Grant_Amount" type="xs:double" />
+      <xs:element minOccurs="0" name="i_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_PI_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="i_Selected_PI_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_AwardLetter_File" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Budget_Details_String" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_CreatedBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_GrantExtended_period" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Grant_Duration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Grant_No" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_ModifyBy_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Reaserch_IO" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Senior_CSCS_Details" nillable="true" type="tns:Senior_CSCS_Details" />
+  <xs:complexType name="ArrayOfSenior_CSCS_Budget_Allocation_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Senior_CSCS_Budget_Allocation_Details" nillable="true" type="tns:Senior_CSCS_Budget_Allocation_Details" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSenior_CSCS_Budget_Allocation_Details" nillable="true" type="tns:ArrayOfSenior_CSCS_Budget_Allocation_Details" />
+  <xs:complexType name="Senior_CSCS_Budget_Allocation_Details">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="i_Budget_Allocation" type="xs:double" />
+      <xs:element minOccurs="0" name="i_Budget_Utilized" type="xs:double" />
+      <xs:element minOccurs="0" name="i_Currency_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="i_Q1" type="xs:double" />
+      <xs:element minOccurs="0" name="i_Q2" type="xs:double" />
+      <xs:element minOccurs="0" name="i_Q3" type="xs:double" />
+      <xs:element minOccurs="0" name="i_Q4" type="xs:double" />
+      <xs:element minOccurs="0" name="i_Senior_CSCS_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="s_Factors" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Yearly_Quaterly" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="s_Years" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Senior_CSCS_Budget_Allocation_Details" nillable="true" type="tns:Senior_CSCS_Budget_Allocation_Details" />
+</xs:schema>
