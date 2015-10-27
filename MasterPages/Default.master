@@ -1,5 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="MasterPages_Default" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -49,11 +52,15 @@
         <asp:HiddenField runat="server" ID="_repostcheckcode" />
         <label id="lblTime" runat="server" style="display: none"></label>
 
-        <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" EnablePartialRendering="true"
+        <%--<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" EnablePartialRendering="true"
             LoadScriptsBeforeUI="false" AsyncPostBackTimeout="360000"
             ScriptMode="Release"
             runat="server">
-        </asp:ScriptManager>
+        </asp:ScriptManager>--%>
+         <asp:ToolkitScriptManager ID="ToolkitScriptManager1" EnablePageMethods="true" EnablePartialRendering="true" LoadScriptsBeforeUI="false" AsyncPostBackTimeout="360000"
+            CombineScripts="true" ScriptMode="Release"
+            runat="server">
+        </asp:ToolkitScriptManager>
 
 
         <header>
