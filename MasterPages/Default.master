@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="MasterPages_Default" %>
 
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%--<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>--%>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Tan Tock Seng Hospital - A Community of Care</title>
-    <meta name="description" content="" />
+    <%--<meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -40,17 +40,17 @@
                 return Other_keypress(e);
             }
         }
-    </script>
+    </script>--%>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" EnablePageMethods="true" EnablePartialRendering="true" LoadScriptsBeforeUI="false" AsyncPostBackTimeout="360000"
+        <%--<asp:ToolkitScriptManager ID="ToolkitScriptManager1" EnablePageMethods="true" EnablePartialRendering="true" LoadScriptsBeforeUI="false" AsyncPostBackTimeout="360000"
             CombineScripts="true" ScriptMode="Release"
             runat="server">
-        </asp:ToolkitScriptManager>
+        </asp:ToolkitScriptManager>--%>
         Master Page area
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
