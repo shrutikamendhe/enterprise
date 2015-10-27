@@ -25,7 +25,7 @@ public partial class MasterPages_Default : System.Web.UI.MasterPage
         }
         catch (Exception ex)
         {
-            Response.Write(ex.Message);
+            Response.Write("<h1> Error: </h1><p>" + ex.Message + "</p><br/><h1>" + ex.StackTrace + "</h1>");
         }
     }
 }
