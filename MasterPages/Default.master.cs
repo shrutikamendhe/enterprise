@@ -37,17 +37,17 @@ public partial class MasterPages_Default : System.Web.UI.MasterPage
                 {
                     PopulateMenu();
 
-                    //if (!DetectAccessRights(ref sPath))
-                    //{
-                    //    Response.Redirect("Login.aspx");
-                    //}
+                    if (!DetectAccessRights(ref sPath))
+                    {
+                        Response.Redirect("Login.aspx");
+                    }
                 }
                 else
                 {
-                    //Response.Redirect("Login.aspx");
+                    Response.Redirect("Login.aspx");
                 }
 
-                hdnUserName.Value = HttpContext.Current.Session["UserName"].ToString();
+                hdnUserName.Value = HttpContext.Current.Session["UserName"] != null ? HttpContext.Current.Session["UserName"].ToString() : string.Empty;
 
             }
         }
@@ -94,10 +94,8 @@ public partial class MasterPages_Default : System.Web.UI.MasterPage
     // Sapna K: Method to get allowed menu names in session
     private void PopulateMenu()
     {
-
         try
         {
-
             // Sapna K: Call Method to get Parent and Child menu names
             DataSet ds = GetDataSetForMenu();
             // Sapna K: Create new arraylist object to store menu item
