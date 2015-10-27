@@ -47,10 +47,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <%--<asp:ToolkitScriptManager ID="ToolkitScriptManager1" EnablePageMethods="true" EnablePartialRendering="true" LoadScriptsBeforeUI="false" AsyncPostBackTimeout="360000"
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" EnablePageMethods="true" EnablePartialRendering="true" LoadScriptsBeforeUI="false" AsyncPostBackTimeout="360000"
             CombineScripts="true" ScriptMode="Release"
             runat="server">
-        </asp:ToolkitScriptManager>--%>
+        </asp:ToolkitScriptManager>
         Master Page area
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
