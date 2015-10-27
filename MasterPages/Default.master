@@ -12,7 +12,7 @@
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <!-- Place favicon.ico in the root directory -->
-   <link href="../css/jquery-ui.css" rel="stylesheet" />
+    <link href="../css/jquery-ui.css" rel="stylesheet" />
     <link href="../css/normalize.css" rel="stylesheet" />
     <link href="../css/base.css" rel="stylesheet" />
     <link href="../css/custom.css" rel="stylesheet" />
@@ -21,7 +21,7 @@
     <link href="../css/ModelPopUp.css" rel="stylesheet" />
     <link href="../css/jQ-UI-Dialog.css" rel="stylesheet" />
 
-     <%--<script src="../Scripts/vendor/jquery-1.11.2.min.js"></script>
+    <script src="../Scripts/vendor/jquery-1.11.2.min.js"></script>
     <script src="../Scripts/jquery-ui.js"></script>
     <script src="../Scripts/jquery-migrate-1.2.1.min.js"></script>
     <script src="../Scripts/jquery.tablesorter.min.js"></script>
@@ -29,7 +29,7 @@
     <script src="../Scripts/Common.js"></script>
     <script src="../Scripts/Pagemethods.js"></script>
 
-    <script type="text/javascript">
+    <%--<script type="text/javascript">
         if (typeof window.event != 'undefined') {
             document.onkeydown = function () { return IE_keydown(); }
         }
