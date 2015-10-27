@@ -44,12 +44,63 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" enctype="multipart/form-data">
+
+        <asp:HiddenField runat="server" ID="_repostcheckcode" />
+        <label id="lblTime" runat="server" style="display: none"></label>
+
         <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" EnablePartialRendering="true"
             LoadScriptsBeforeUI="false" AsyncPostBackTimeout="360000"
             ScriptMode="Release"
             runat="server">
         </asp:ScriptManager>
+
+
+        <header>
+            <div style="background-color: #333333; padding: 0px; height: 5px;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="logo-head img-responsive" href="#">
+                            <img src="../Images/TanTockSeng-Hospital-Logo.jpg" alt="Clinical Research &amp; Innovation (CRIO)" /></a>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="top-search">
+                        </p>
+                        <a class="adapNav" href="#">
+                            <img src="../Images/icon-dashboard.png" alt="Microsoft Service Center Menu" /></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="nav-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+
+                            <%--<asp:Menu ID="UserMenu" runat="server" StaticEnableDefaultPopOutImage="false" Orientation="Horizontal"
+                                MaximumDynamicDisplayLevels="3" CssClass="msc-nav">
+
+                                <StaticMenuItemStyle HorizontalPadding="10px" ItemSpacing="1px" VerticalPadding="5px"
+                                    CssClass="dropmenudiv" />
+
+                                <StaticHoverStyle ForeColor="white" BackColor="#333333" CssClass="parent" />
+                                <DynamicMenuItemStyle CssClass="msc-nav" />
+                                <DynamicHoverStyle CssClass="msc-nav" />
+
+                            </asp:Menu>--%>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+
         Master Page area
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
