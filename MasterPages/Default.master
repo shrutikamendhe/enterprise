@@ -1,17 +1,52 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default.master.cs" Inherits="MasterPages_Default" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tan Tock Seng Hospital - A Community of Care</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <link href="../css/jquery-ui.css" rel="stylesheet" />
+    <link href="../css/normalize.css" rel="stylesheet" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/custom.css" rel="stylesheet" />
+    <link href="../css/tableSorter.css" rel="stylesheet" />
+    <link href="../App_Themes/default.css" rel="stylesheet" />
+    <link href="../css/ModelPopUp.css" rel="stylesheet" />
+    <link href="../css/jQ-UI-Dialog.css" rel="stylesheet" />
+
+    <script src="../Scripts/vendor/jquery-1.11.2.min.js"></script>
+    <script src="../Scripts/jquery-ui.js"></script>
+    <script src="../Scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../Scripts/jquery.tablesorter.min.js"></script>
+    <script src="../Scripts/Webform/jquery.blockUI.js"></script>
+    <script src="../Scripts/Common.js"></script>
+    <script src="../Scripts/Pagemethods.js"></script>
+
+    <script type="text/javascript">
+        if (typeof window.event != 'undefined') {
+            document.onkeydown = function () { return IE_keydown(); }
+        }
+        else {
+            document.onkeypress = function (e) {
+                return Other_keypress(e);
+            }
+        }
+    </script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
         <asp:ToolkitScriptManager ID="ToolkitScriptManager1" EnablePageMethods="true" EnablePartialRendering="true" LoadScriptsBeforeUI="false" AsyncPostBackTimeout="360000"
             CombineScripts="true" ScriptMode="Release"
             runat="server">
