@@ -9,16 +9,23 @@ public partial class MasterPages_Default : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        //------Added by Atul
-        if (!Request.Url.AbsoluteUri.Contains("Reports"))
+        try
         {
-            if (ScriptManager.GetCurrent(Page).IsInAsyncPostBack)
+            //------Added by Atul
+            if (!Request.Url.AbsoluteUri.Contains("Reports"))
             {
+                if (ScriptManager.GetCurrent(Page).IsInAsyncPostBack)
+                {
+                }
+                else
+                {
+                    //CancelUnexpectedRePost();
+                }
             }
-            else
-            {
-                //CancelUnexpectedRePost();
-            }
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
         }
     }
 }
