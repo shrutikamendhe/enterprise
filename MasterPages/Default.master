@@ -81,7 +81,7 @@
                         <div class="col-md-12">
 
 
-                            <%--<asp:Menu ID="UserMenu" runat="server" StaticEnableDefaultPopOutImage="false" Orientation="Horizontal"
+                            <asp:Menu ID="UserMenu" runat="server" StaticEnableDefaultPopOutImage="false" Orientation="Horizontal"
                                 MaximumDynamicDisplayLevels="3" CssClass="msc-nav">
 
                                 <StaticMenuItemStyle HorizontalPadding="10px" ItemSpacing="1px" VerticalPadding="5px"
@@ -91,7 +91,7 @@
                                 <DynamicMenuItemStyle CssClass="msc-nav" />
                                 <DynamicHoverStyle CssClass="msc-nav" />
 
-                            </asp:Menu>--%>
+                            </asp:Menu>
 
                         </div>
                     </div>
