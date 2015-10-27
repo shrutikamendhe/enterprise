@@ -37,14 +37,14 @@ public partial class MasterPages_Default : System.Web.UI.MasterPage
                 {
                     PopulateMenu();
 
-                    if (!DetectAccessRights(ref sPath))
-                    {
-                        Response.Redirect("Login.aspx");
-                    }
+                    //if (!DetectAccessRights(ref sPath))
+                    //{
+                    //    Response.Redirect("Login.aspx");
+                    //}
                 }
                 else
                 {
-                    Response.Redirect("Login.aspx");
+                    //Response.Redirect("Login.aspx");
                 }
 
                 hdnUserName.Value = HttpContext.Current.Session["UserName"].ToString();
