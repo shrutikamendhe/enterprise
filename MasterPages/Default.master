@@ -97,8 +97,7 @@
 
         </header>
 
-
-        <div id="body"  >
+        <div id="body">
             <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
             <section class="content-wrapper main-content clear-fix">
 
@@ -114,11 +113,44 @@
             </section>
         </div>
 
-        Master Page area
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-    </div>
+        <footer>
+            <div class="footer-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Clinical Research &amp; Innovation (CRIO) Database System</h4>
+                            <p>Website: http://www.ttsh.com.sg  Phone: (65) 6357 8898/9  Fax: (65) 6251 4095</p>
+                            <p>11 Jalan Tan Tock Seng, Singapore 308433</p>
+                        </div>
+                        <div class="col-md-6 align-right">
+                            <h4>A Product of Tan Tock Seng Hospital</h4>
+                            <p>Copyright &copy; 2015 Tan Tock Seng Hospital, Singapore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <asp:Button ID="btnLogout" OnClick="btnLogout_Click" runat="server" Style="display: none" Text="Button" />
+        <asp:HiddenField ID="hdnUserName" runat="server" />
     </form>
+
+    <script type="text/javascript">
+        window.setTimeout("ShowTime()", 1000);
+        function scrlsts() {
+            scrl = scrl.substring(1, scrl.length) + scrl.substring(0, 1);
+        }
+        function ShowTime() {
+            var dt = new Date();
+            var shortdt = dt.format('dddd, dd/MMM/yyyy');
+            document.getElementById("lblTime").innerHTML = dt.toLocaleTimeString();
+            window.setTimeout("ShowTime()", 1000);
+        }
+    </script>
+    <div id="dialog-message"></div>
+
+
+    <script src="../Scripts/plugins.js"></script>
+    <script src="../Scripts/main.js"></script>
 </body>
 </html>
