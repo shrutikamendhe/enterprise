@@ -29,7 +29,7 @@
     <script src="../Scripts/Common.js"></script>
     <script src="../Scripts/Pagemethods.js"></script>
 
-    <%--<script type="text/javascript">
+    <script type="text/javascript">
         if (typeof window.event != 'undefined') {
             document.onkeydown = function () { return IE_keydown(); }
         }
@@ -38,7 +38,7 @@
                 return Other_keypress(e);
             }
         }
-    </script>--%>
+    </script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
