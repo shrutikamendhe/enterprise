@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <a class="logo-head img-responsive" href="#">
-                        <img src="images/TanTockSeng-Hospital-Logo.jpg" alt="Clinical Research &amp; Innovation (CRIO)" />
+                        <img src="Images/TanTockSeng-Hospital-Logo.jpg" alt="Clinical Research &amp; Innovation (CRIO)" />
                     </a>
                 </div>
             </div>
@@ -79,7 +79,7 @@
 
                 </div>
                 <div class="col-md-6">
-                    <img src="images/login-filler.jpg" alt="" />
+                    <img src="Images/login-filler.jpg" alt="" />
                 </div>
             </div>
         </div>
@@ -102,11 +102,10 @@
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-
+        <script>window.jQuery || document.write('<script src="Scripts/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="Scripts/plugins.js"></script>
+        <script src="Scripts/main.js"></script>
+        
         <!-- Google Analytics -->
         <script></script>
 
