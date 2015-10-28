@@ -17,6 +17,46 @@ public partial class Login : System.Web.UI.Page
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
+        try
+        {
+            string ADserver = System.Configuration.ConfigurationManager.AppSettings["ADserver"].ToString();
+            string userName = txtUserName.Text.Trim();
+            string password = txtPassword.Text.Trim();
+            bool auth = TTSH.BusinessLogic.Authentication.LdapAuthentication.Authenticate(ADserver, userName, password);
+            if (auth)
+            {
+                string[] Groups = TTSH.BusinessLogic.Authentication.LdapAuthentication.GetGroupNames(userName, password);
+                string UserGp = String.Join(",", Groups.ToArray());
+                UserGp = "'" + UserGp.Replace(",", "','") + "'";
 
+                Response.Write(UserGp);
+
+                //List<ADUserDetails> userMenuldt = new List<ADUserDetails>();
+                //userMenuldt = proxy.GetMenusByGroup(UserGp).ToList();
+
+                //DataTable dttable = new DataTable();
+                //dttable = ToDataTable(userMenuldt);
+
+                //HttpContext.Current.Session["MenuDT"] = dttable;
+
+                //HttpContext.Current.Session["UserID"] = proxy.GetUserGUID(txtUserName.Text.Trim());
+
+                //HttpContext.Current.Session["UserGroups"] = UserGp;
+
+                ////Bind User details in session
+                ////proxy.GetUserDetails(txtUserName.Text.Trim());
+
+                //Response.Redirect("Dashboard.aspx", false);
+                // PopulateMenu();
+            }
+            else
+            {
+                FailureText.Text = "Invalid Login Name/Password.";
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
     }
 }
