@@ -39,6 +39,7 @@ public partial class Login : System.Web.UI.Page
         catch (Exception ex)
         {
             Response.Write(ex.Message);
+            FailureText.Text = ex.Message;
         }
     }
 }
