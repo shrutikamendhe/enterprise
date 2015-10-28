@@ -30,24 +30,6 @@ public partial class Login : System.Web.UI.Page
                 UserGp = "'" + UserGp.Replace(",", "','") + "'";
 
                 Response.Write(UserGp);
-
-                //List<ADUserDetails> userMenuldt = new List<ADUserDetails>();
-                //userMenuldt = proxy.GetMenusByGroup(UserGp).ToList();
-
-                //DataTable dttable = new DataTable();
-                //dttable = ToDataTable(userMenuldt);
-
-                //HttpContext.Current.Session["MenuDT"] = dttable;
-
-                //HttpContext.Current.Session["UserID"] = proxy.GetUserGUID(txtUserName.Text.Trim());
-
-                //HttpContext.Current.Session["UserGroups"] = UserGp;
-
-                ////Bind User details in session
-                ////proxy.GetUserDetails(txtUserName.Text.Trim());
-
-                //Response.Redirect("Dashboard.aspx", false);
-                // PopulateMenu();
             }
             else
             {
